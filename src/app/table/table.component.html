@@ -1,1 +1,19 @@
 <p>table works!</p>
+<table class="table" *ngIf="(cols > 1 && rows > 0)">
+<thead>
+  <tr>
+    <th scope="col" *ngFor="let key of keyArray">{{key.name}}</th>
+    <th scope="col">Edit</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let data of dataArray">
+    <td *ngFor="let key of keyArray">
+      {{data[key.key]}}
+    </td>
+    <td>
+      <button class="btn btn-primary">EDIT</button>
+    </td>
+  </tr>
+</tbody>
+</table>
