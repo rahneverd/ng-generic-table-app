@@ -1,1 +1,11 @@
 <p>input-form works!</p>
+
+<div class="row">
+  <form [formGroup]="dataForm">
+    <div class="form-group col-md-6 pull-left" *ngFor="let data of keyArray" >
+      <label>{{data.name}}</label>
+      <input class="form-control" [type]="data.type" formControlName={{data.key}} [class.is-invalid]="dataForm.get(data.key).invalid && dataForm.get(data.key).touched">
+      <!-- <p>{{dataForm[data.key].errors}}</p> -->
+    </div>
+  </form>
+</div>
