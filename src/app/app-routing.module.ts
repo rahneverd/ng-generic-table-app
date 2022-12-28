@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EditModule } from './edit/edit.module';
+import { InputFormComponent } from './input-form/input-form.component';
+import { TableComponent } from './table/table.component';
 
 const routes: Routes = [
-  {path: 'edit', component: EditModule}
+  {path: '', component: InputFormComponent},
+  {path: '', component: TableComponent, outlet: 'table'},
+  {path: 'admin', loadChildren:()=>import('./edit/edit.module')
+  .then(mod => mod.EditModule)
+}
 ];
 
 @NgModule({

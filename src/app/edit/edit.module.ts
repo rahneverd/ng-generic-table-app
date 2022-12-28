@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { EditRoutingModule } from './edit-routing.module';
 import { EditComponent } from './edit/edit.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
-  declarations: [EditComponent],
+  declarations: [EditComponent, DeleteComponent],
   imports: [
     CommonModule,
     EditRoutingModule
