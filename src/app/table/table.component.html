@@ -1,4 +1,4 @@
-<p>table works!</p>
+
 <table class="table" *ngIf="(cols > 1 && rows > 0)">
 <thead>
   <tr>
@@ -7,12 +7,12 @@
   </tr>
 </thead>
 <tbody>
-  <tr *ngFor="let data of dataArray">
+  <tr *ngFor="let data of dataArray; let i = index">
     <td *ngFor="let key of keyArray">
       {{data[key.key]}}
     </td>
     <td>
-      <button class="btn btn-primary">EDIT</button>
+      <a class="btn btn-primary" (click)="consoleLog(i)" routerLink="/admin/edit">EDIT</a>
     </td>
   </tr>
 </tbody>

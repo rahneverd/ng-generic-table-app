@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InputFormComponent } from './input-form/input-form.component';
 import { TableComponent } from './table/table.component';
+import { HeaderComponentComponent } from './header-component/header-component.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InputFormComponent,
-    TableComponent
+    TableComponent,
+    HeaderComponentComponent
   ],
   imports: [
     BrowserModule,

@@ -9,14 +9,20 @@ import { DataService } from '../data.service';
 })
 export class InputFormComponent implements OnInit {
   keyArray
+  dataArray
   constructor(private _data: DataService, private _fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.keyArray = this._data.keyArray
-    console.log(this.dataForm)
+    this.dataArray = this._data.dataArray
+
   }
 
   dataForm = this._fb.group(this._data.keyObj)
 
+  onSubmit() {
+    this.dataArray.push(this.dataForm.value)
+    this.dataForm.reset()
+  }
 
 }
