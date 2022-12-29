@@ -1,1 +1,12 @@
-<p>edit works!</p>
+<p>Working</p>
+<div class="container-fluid mt-2 mb-2">
+  <form [formGroup]="dataForm" class="form-row">
+    <div class="col-md-6" *ngFor="let data of keyArray" >
+      <label class="form-label">{{data.name}}</label>
+      <input class="form-control" [type]="data.type" formControlName={{data.key}} [class.is-invalid]="dataForm.get(data.key).invalid && dataForm.get(data.key).touched">
+    </div>
+    <button [disabled]="!(dataForm.valid && dataForm.dirty)" class="btn btn-primary mt-2 px-4 py-2 margin-right" (click)="updateObj()">UPDATE</button>
+    <button class="btn btn-primary mt-2 px-4 py-2" routerLink="/">CANCEL</button>
+  </form>
+</div>
+<hr>

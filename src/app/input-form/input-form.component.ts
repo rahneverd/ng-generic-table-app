@@ -15,7 +15,6 @@ export class InputFormComponent implements OnInit {
   ngOnInit(): void {
     this.keyArray = this._data.keyArray
     this.dataArray = this._data.dataArray
-
   }
 
   dataForm = this._fb.group(this._data.keyObj)

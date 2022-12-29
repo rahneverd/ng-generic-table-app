@@ -4,6 +4,7 @@
   <tr>
     <th scope="col" *ngFor="let key of keyArray">{{key.name}}</th>
     <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
   </tr>
 </thead>
 <tbody>
@@ -12,7 +13,10 @@
       {{data[key.key]}}
     </td>
     <td>
-      <a class="btn btn-primary" (click)="consoleLog(i)" routerLink="/admin/edit">EDIT</a>
+      <a class="btn btn-primary"  [routerLink]="['/edit', i]">EDIT</a>
+    </td>
+    <td>
+      <a class="btn btn-danger" (click)="deleteObj(i)">DELETE</a>
     </td>
   </tr>
 </tbody>

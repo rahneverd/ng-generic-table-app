@@ -20,8 +20,8 @@ export class TableComponent implements OnInit {
     this.rows = this.dataArray.length + 1
   }
 
-  consoleLog(i) {
-    console.log(i)
+  deleteObj(i) {
+    this.dataArray.splice(i, 1)
   }
 
 }

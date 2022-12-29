@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { EditRoutingModule } from './edit-routing.module';
 import { EditComponent } from './edit/edit.component';
-import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
-  declarations: [EditComponent, DeleteComponent],
+  declarations: [EditComponent],
   imports: [
     CommonModule,
-    EditRoutingModule
+    EditRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class EditModule { }
