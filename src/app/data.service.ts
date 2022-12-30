@@ -17,7 +17,7 @@ export class DataService {
     {key: "last_name", name: "Last Name", type: "text"},
     {key: "age", name: "Age", type: "number"},
     {key: "languages", name: "Languages", type: "text"},
-    {key: "city", name: "City", type: "password"}
+    {key: "city", name: "City", type: "text"}
   ]
   dataArray= [
     {city: "Rawalpindi", first_name: "Muhammad", last_name: "Owais", age: 27, languages: "Angular JS"},
